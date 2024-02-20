@@ -38,7 +38,7 @@ import org.springframework.web.bind.annotation.*;
 // @RequestMapping : 특정 URL을 매핑하게 도와준다.
 @RequestMapping("/api/v1/posts")
 // @RequiredArgsConstructor : final 혹은 @NonNull 어노테이션이 붙은 필드에 대한 생성자를 자동으로 생성해준다.
-@RequiredArgsConstructor
+@RequiredArgsConstructor//
 
 public class PostController {
 
