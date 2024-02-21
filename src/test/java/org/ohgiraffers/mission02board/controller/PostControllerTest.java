@@ -147,7 +147,7 @@ public class PostControllerTest {
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$.postId").value(1L))
 //                .andExpect(jsonPath("$.title").value("테스트 제목"))
-//                .andExpect(jsonPath("$.content").value("테스트 내용"))
+//                .andExpect(jsonPath("$.content").value("테스트 내용 "))
                 .andDo(print());
     }
 
@@ -160,8 +160,11 @@ public class PostControllerTest {
         int page = 0;
         int size = 5;
         PageRequest pageRequest = PageRequest.of(page, size);
+
         ReadPostResponse readPostResponse = new ReadPostResponse(1L, "테스트 제목", "테스트 내용");
+
         List<ReadPostResponse> responses = new ArrayList<>();
+
         responses.add(readPostResponse);
 
         Page<ReadPostResponse> pageResponses = new PageImpl<>(responses, pageRequest, responses.size());
