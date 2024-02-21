@@ -23,7 +23,7 @@ import org.springframework.web.bind.annotation.*;
 
 /** Controller RestController
  * Controller 주로 화면 View 를 반환 하기 위해 사용된다.
- * 하지만 종종 Controller를 쓰면서도 데이터를 반환 해야 할 때가 있는데, 이럴 대 사용하는 것이 @ResponseBody 이다.
+ * 하지만 종종 Controller 를 쓰면서도 데이터를 반환 해야 할 때가 있는데, 이럴 대 사용하는 것이 @ResponseBody 이다.
  *
  * REST란?
  * Representational AState Transfer의 약자

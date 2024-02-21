@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 *
 *   @WebMvcTst
 *   MVC 를 위한 테스트, 컨트롤러가 예상대로 동작하는지 테스트하는데 사용된다.
-*   웹 어플리케이션을 어플리케이션 서버에 배포하지 않고 테스트용 MVC 환경을 만들어 요청 및 전송 은답기능을 제공해준다.*/
+*   웹 어플리케이션을 어플리케이션 서버에 배포하지 않고 테스트용 MVC 환경을 만들어 요청 및 전송 응답기능을 제공해준다.*/
 
 @WebMvcTest(PostController.class)
 public class PostControllerTest {
@@ -89,7 +89,7 @@ public class PostControllerTest {
 
         //given
         Long postId = 1L;
-
+//
         ReadPostResponse response = new ReadPostResponse(1L, "테스트 제목", "테스트 내용");
 
         given(postService.readPostById(any())).willReturn(response);
