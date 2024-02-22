@@ -59,7 +59,7 @@ public class PostServiceTest {
     @Test
     @DisplayName("게시글 작성 기능 테스트")
     void create_post_test() {
-        //given
+        //given(초기 상태 설정)
 
         //mockito 기본 형태
         //when(postRepository.save(any())).thenReturn(post);
@@ -67,10 +67,10 @@ public class PostServiceTest {
         //BDDMockito 형태
         given(postRepository.save(any())).willReturn(post);
 
-        //when
+        //when(특정 동작이 발생했을 때의 상황을 설정하고 실행)
         CreatePostResponse createPostResponse = postService.createPost(createPostRequest);
 
-        //then
+        //then(기대하는 결과를 검증)
         assertThat(createPostResponse.getPostId()).isEqualTo(1L);
         assertThat(createPostResponse.getTitle()).isEqualTo("테스트 제목");
         assertThat(createPostResponse.getContent()).isEqualTo("테스트 내용");
