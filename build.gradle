@@ -47,6 +47,10 @@ tasks.named('bootBuildImage') {
     builder = 'paketobuildpacks/builder-jammy-base:latest'
 }
 
-tasks.named('test') {
-    useJUnitPlatform()
+tasks.register('copyPrivate') {
+    copy {
+        from './mission02-board-config'
+        include "application.yml"
+        into 'src/main/resources'
+    }
 }
