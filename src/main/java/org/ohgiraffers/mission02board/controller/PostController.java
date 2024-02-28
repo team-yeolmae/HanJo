@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.*;
  * REST는 기본적으로 웹의 기존 기술과 HTTP 프로토콜을 그대로 사용하기 때문에,
  * 웹의 장점을 최대한 활용 할 수 있는 아키텍쳐 스타일이다.
  */
-@Tag(name = "posts", description = "게시글 API")
+@Tag(name = "posts", description = "게시글 API")//
 
 @Controller
 @ResponseBody
